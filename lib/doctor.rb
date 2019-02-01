@@ -1,4 +1,6 @@
- attr_reader :name, :appointment, :patient
+class Doctor
+
+   attr_reader :name, :appointment, :patient
 
    @@all_doc = []
 
@@ -20,4 +22,11 @@
       appointment.doctor == self
     end
   end
-end
+
+   def patients
+    appointments.map do |appointment|
+      appointment.patients
+    end
+  end
+
+ end
