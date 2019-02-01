@@ -1,6 +1,7 @@
 class Patient
 
    attr_reader :name, :appointment, :doctor
+   ALL = []
 
    def initialize(name)
     @name = name
